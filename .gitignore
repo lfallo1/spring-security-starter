@@ -1,0 +1,13 @@
+.DS_Store
+node_modules/
+.metadata/
+target/*
+target/
+.project
+.settings/
+.classpath
+/target/
+/target/
+/target/
+bin/
+bower/

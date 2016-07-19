@@ -1,0 +1,18 @@
+{
+  "name": "moodcast",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "~1.4.6",
+    "angular-animate": "~1.4.6",
+    "angular-resource": "~1.4.6",
+    "angular-route": "~1.4.6",
+    "angular-sanitize": "~1.4.6",
+    "angular-bootstrap": "~0.13.4",
+    "bootstrap": "~3.3.6",
+    "jquery":"*"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.6"
+  },
+  "appPath": "app"
+}
