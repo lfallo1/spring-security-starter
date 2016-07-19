@@ -11,11 +11,11 @@ import org.springframework.security.core.AuthenticationException;
 public class RestAuthenticationEntryPoint extends BasicAuthenticationEntryPoint {
 	public void commence(HttpServletRequest request, HttpServletResponse response,
 			AuthenticationException authException) throws IOException, ServletException {
-		
+
 		HttpServletResponse httpResponse = (HttpServletResponse) response;
 
 		httpResponse.setContentType("application/json");
 		httpResponse.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-		httpResponse.getOutputStream().println("{ \"error\": \"" + authException.getMessage() + "\" }");		
+		httpResponse.getOutputStream().println("{ \"error\": \"Y'aint got access foo!\" }");		
 	}
 }

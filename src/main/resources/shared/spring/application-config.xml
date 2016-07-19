@@ -42,15 +42,12 @@
 	<bean
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
 		id="multipartResolver" />
-
-	<bean id="access-denied" class="com.lancefallon.security.JSONAccessDeniedHandler" />
-
+		
 	<bean id="restAuthenticationEntryPoint" class="com.lancefallon.security.RestAuthenticationEntryPoint" />
 
 	<!-- Rest authentication entry point configuration -->
 	<security:http auto-config="true" use-expressions="true">
 		<security:http-basic entry-point-ref="restAuthenticationEntryPoint" />
-		<security:access-denied-handler ref="access-denied" />
 		<security:intercept-url pattern="/**" access="permitAll" />
 	</security:http>
 
