@@ -351,6 +351,13 @@
 			<version>1.9.2</version>
 		</dependency>
 
+		<!-- BCrypt -->
+		<dependency>
+			<groupId>org.mindrot</groupId>
+			<artifactId>jbcrypt</artifactId>
+			<version>0.3m</version>
+		</dependency>
+
 		<!-- SFTP Connection via JSch -->
 		<!-- dependency> <groupId>com.jcraft</groupId> <artifactId>jsch</artifactId> 
 			<version>0.1.51</version> </dependency -->

@@ -1,16 +1,28 @@
 package com.lancefallon.security;
 
-import java.security.Principal;
-
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.stereotype.Component;
+
+import com.lancefallon.model.User;
 
 @Component("authService")
 public class RestAuthService {
-	public Boolean grantAccess(Principal principal, Integer id){
-		if(principal != null){
-			String name = principal.getName();
-			System.out.println(name);	
+	public Boolean grantAccess(UsernamePasswordAuthenticationToken token, Integer id){
+		if(token == null){
+			return false;
 		}
-		return principal != null;
+		User activeUser = (User) token.getPrincipal();
+		String name = activeUser.getUsername();
+		System.out.println(name);
+		return true;
+	}
+	
+	
+	public Boolean canView(User user, UsernamePasswordAuthenticationToken token){
+		if(token == null){
+			return false;
+		}
+		User activeUser = (User) token.getPrincipal();
+		return user.getUsername().toLowerCase().equals(activeUser.getUsername());
 	}
 }
